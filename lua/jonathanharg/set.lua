@@ -1,6 +1,12 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- vim.opt.background = "dark"
+-- vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("ayu-mirage")
+
+vim.opt.spelllang = "en-gb"
+
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -25,6 +31,7 @@ vim.o.mouse = 'a'
 -- Default Fomat Options
 -- vim.opt.formatlistpat = "jcroql"
 -- No commenting on newline on enter see https://superuser.com/questions/271023/can-i-disable-continuation-of-comments-to-the-next-line-in-vim
+-- TODO: This is broken
 vim.opt.formatoptions = "jql"
 
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience

@@ -17,7 +17,10 @@ return require("packer").startup(function(use)
     -- Colours
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
-    use('olivercederborg/poimandres.nvim')
+    -- use { "bluz71/vim-moonfly-colors", as = "moonfly" }
+    use("NLKNguyen/papercolor-theme")
+    use("Th3Whit3Wolf/one-nvim")
+    use("Shatur/neovim-ayu")
 
     -- Dependencies
     use("nvim-lua/plenary.nvim")
@@ -43,7 +46,6 @@ return require("packer").startup(function(use)
     -- Tab Switcher
     use("theprimeagen/harpoon")
 
-
     -- Undo Tree
     use("mbbill/undotree")
 
@@ -53,6 +55,8 @@ return require("packer").startup(function(use)
     -- Language Server
     use {
         "VonHeikemen/lsp-zero.nvim",
+        branch = 'v1.x', -- Protect from breaking changes
+        -- see https://github.com/VonHeikemen/lsp-zero.nvim/tree/main
         requires = {
             -- LSP Support
             { "neovim/nvim-lspconfig" },
@@ -72,6 +76,8 @@ return require("packer").startup(function(use)
             { "rafamadriz/friendly-snippets" },
         }
     }
+    use("jay-babu/mason-null-ls.nvim")
+    use("jose-elias-alvarez/null-ls.nvim")
     use("j-hui/fidget.nvim") -- LSP Status indicator
 
     -- Text
@@ -80,7 +86,15 @@ return require("packer").startup(function(use)
     use("lukas-reineke/indent-blankline.nvim")
     use("folke/todo-comments.nvim")
     use("kylechui/nvim-surround")
-    use("tpope/vim-sleuth")
+    -- use("tpope/vim-sleuth")
+
+    -- Markdown
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
 
     -- For NVim development
     use("folke/neodev.nvim")
@@ -97,9 +111,12 @@ return require("packer").startup(function(use)
         requires = {
             "nvim-tree/nvim-web-devicons", -- optional, for file icons
         },
-        tag = "nightly" -- optional, updated every week. (see issue #1193)
+        tag = "nightly"                    -- optional, updated every week. (see issue #1193)
     })
 
     -- LaTex
     -- use("lervag/vimtex")
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)

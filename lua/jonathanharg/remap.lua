@@ -40,7 +40,7 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = 'Format file' })
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = 'Up quickfix' })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = 'Down quickfix' })
 
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = 'Replace selection in file' })
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = 'Make current file executable' })
 
