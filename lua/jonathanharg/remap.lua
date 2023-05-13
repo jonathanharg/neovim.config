@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = 'Make current file executable' })
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, {desc = 'Previous diagnostic'})
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, {desc = 'Next diagnostic'})
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {desc='View diagnostic'})
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, {desc='View all diagnostics'})
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Previous diagnostic' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next diagnostic' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'View diagnostic' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'View all diagnostics' })

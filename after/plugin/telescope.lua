@@ -4,7 +4,7 @@ local builtin = require("telescope.builtin")
 telescope.setup()
 require("telescope").load_extension("fzf")
 
-vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Search Git files' }) -- TODO: Rebind
+vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Search Git files' })              -- TODO: Rebind
 vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = 'Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', builtin.buffers, { desc = 'Find existing buffers' }) --TODO: rebind?
 vim.keymap.set('n', '<leader>/', function()

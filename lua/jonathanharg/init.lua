@@ -23,7 +23,7 @@ autocmd('TextYankPost', {
 })
 
 -- TODO: Find out what this does
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = jonathanharggroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],

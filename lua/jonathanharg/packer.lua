@@ -26,8 +26,13 @@ return require("packer").startup(function(use)
     use("nvim-lua/plenary.nvim")
 
     -- Git
-    use("tpope/vim-fugitive")
+    use("TimUntersberger/neogit")
+    use {
+        'ruifm/gitlinker.nvim',
+        requires = 'nvim-lua/plenary.nvim',
+    }
     use("lewis6991/gitsigns.nvim")
+    use("sindrets/diffview.nvim")
 
     -- Shortcut Helper
     use("folke/which-key.nvim")
