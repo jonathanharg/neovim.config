@@ -3,7 +3,7 @@ vim.opt.relativenumber = true
 
 -- vim.opt.background = "dark"
 -- vim.cmd.colorscheme("tokyonight")
-vim.cmd.colorscheme("ayu-mirage")
+-- vim.cmd.colorscheme("ayu-mirage")
 
 vim.opt.spelllang = "en-gb"
 
@@ -37,13 +37,14 @@ vim.opt.formatoptions = "jql"
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
+--
+-- vim.g.netrw_browse_split = 0
+-- vim.g.netrw_banner = 0
+-- vim.g.netrw_winsize = 25
 
 vim.opt.termguicolors = true
 
