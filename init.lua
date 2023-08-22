@@ -1,11 +1,5 @@
-require("set")
--- require("jonathanharg.packer")
--- require("remap")
-
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-local jonathanharggroup = augroup('jonathanharg', {})
-local yank_group = augroup('HighlightYank', {})
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -17,14 +11,21 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- TEMP
+if vim.g.neovide then
+  vim.g.neovide_cursor_trail_legnth = 0
+  vim.g.neovide_cursor_animation_length = 0
+  vim.o.guifont = "Jetbrains Mono"
+end
+
 require('lazy').setup("plugins")
 
--- END TEMP
+require("set")
+require("remap")
 
--- function R(name)
---     require("plenary.reload").reload_module(name)
--- end
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+local jonathanharggroup = augroup('jonathanharg', {})
+local yank_group = augroup('HighlightYank', {})
 
 autocmd('TextYankPost', {
     group = yank_group,

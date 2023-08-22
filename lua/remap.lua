@@ -14,8 +14,6 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = 'Previous match' })
 -- greatest remap ever - delete and paste without modifying buffer
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = 'Delete and paste' })
 
--- TODO: Add remap for paste from system clipboard?
-
 -- next greatest remap ever : asbjornHaland
 -- copy to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = 'Yank to system clipboard' })
@@ -28,15 +26,9 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = 'Delete to void regi
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Up' })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Down' })
 
--- This is going to get me cancelled
--- vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- vim.keymap.set("n", "Q", "<nop>")
--- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = 'Format file' })
+vim.keymap.set("n", "Q", "<nop>")
 
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = 'Next quickfix' })
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = 'Previous quickfix' })
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = 'Up quickfix' })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = 'Down quickfix' })
 
